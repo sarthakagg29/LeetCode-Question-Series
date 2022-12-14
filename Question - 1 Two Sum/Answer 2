@@ -1,0 +1,8 @@
+#Using Enumerate instead of range
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        for i,j in enumerate(nums):
+            another = target - nums[i]
+            if another in nums and nums.index(another) != i:
+                return i,nums.index(another)
+        return "No answer"
